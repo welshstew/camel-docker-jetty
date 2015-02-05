@@ -1,0 +1,8 @@
+# additional data require to create the Docker image
+packaging:
+  # files to add to the build, usually used with ADD in the Dockerfile
+  add:
+    # the plugin always filters
+    - target/${project.build.finalName}.war
+
+tag: ${project.artifactId}:${project.version}
